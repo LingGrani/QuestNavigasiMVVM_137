@@ -37,18 +37,26 @@ fun FormulirView(
     listJK: List<String>,
     onSubmitClicked: (MutableList<String>) -> Unit
 ) {
+    var nim by remember { mutableStateOf("")}
     var nama by remember { mutableStateOf("")}
     var email by remember { mutableStateOf("")}
     var alamat by remember { mutableStateOf("")}
     var nomortelepon by remember { mutableStateOf("")}
     var gender by remember { mutableStateOf("")}
 
-    val listData : MutableList<String> = mutableListOf(nama, gender, email, alamat, nomortelepon)
+    val listData : MutableList<String> = mutableListOf(nim, nama, gender, email, alamat, nomortelepon)
 
     Column (
         modifier = modifier.fillMaxSize().padding(16.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
+        TextField(
+            value = nim,
+            onValueChange = { nim = it },
+            label = { Text("Nim") },
+            placeholder = { Text("isi nama anda")},
+            modifier = Modifier.fillMaxWidth().padding(5.dp),
+        )
         TextField(
             value = nama,
             onValueChange = { nama = it },

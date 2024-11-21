@@ -28,6 +28,8 @@ fun TampilDataView(
         DetailMhs("Nama", uiState.nama)
         DetailMhs("Jenis Kelamin", uiState.jenisKelamin)
         DetailMhs("Email", uiState.email)
+        DetailMhs("Alamat", uiState.alamat)
+        DetailMhs("Nomor Telepon", uiState.noTelp)
         Button(onClick = onBackButton) {
             Text(text = "Kembali")
         }

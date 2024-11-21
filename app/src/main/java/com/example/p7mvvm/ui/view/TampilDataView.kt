@@ -25,6 +25,7 @@ fun TampilDataView(
         padding(16.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
+        DetailMhs("NIM", uiState.nim)
         DetailMhs("Nama", uiState.nama)
         DetailMhs("Jenis Kelamin", uiState.jenisKelamin)
         DetailMhs("Email", uiState.email)

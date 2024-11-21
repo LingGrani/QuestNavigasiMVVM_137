@@ -54,8 +54,9 @@ fun FormulirView(
             value = nim,
             onValueChange = { nim = it },
             label = { Text("Nim") },
-            placeholder = { Text("isi nama anda")},
+            placeholder = { Text("isi nim anda")},
             modifier = Modifier.fillMaxWidth().padding(5.dp),
+            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number)
         )
         TextField(
             value = nama,
